@@ -66,6 +66,8 @@ for chart in chartList:
 os.chdir("../")
 createLogoDict()
 deleteUntarDir("helm-chart-untar-sources")
+
+os.system("helm repo index . --url=https://sushilsanjaybhile.github.io/helmcharts/")
 #exit
 #cd ..
 #helm repo index --url https://sushilsanjaybhile.github.io/helmcharts/ --merge index.yaml .
