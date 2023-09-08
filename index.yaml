@@ -15,7 +15,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.12.4
-    created: "2023-09-08T00:08:16.265952282+05:30"
+    created: "2023-09-08T12:17:21.785427641+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -39,12 +39,12 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/cert-manager
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/cert-manager-0.12.1.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/cert-manager-0.12.1.tgz
     version: 0.12.1
   elastic-stack:
   - apiVersion: v1
     appVersion: 7.6.2
-    created: "2023-09-08T00:08:16.27132366+05:30"
+    created: "2023-09-08T12:17:21.790402297+05:30"
     dependencies:
     - condition: elasticsearch.enabled
       name: elasticsearch
@@ -68,12 +68,12 @@ entries:
     icon: https://www.elastic.co/assets/bltb35193323e8f1770/logo-elastic-stack-lt.svg
     name: elastic-stack
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/elastic-stack-3.0.0.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/elastic-stack-3.0.0.tgz
     version: 3.0.0
   elasticsearch:
   - apiVersion: v1
     appVersion: 8.5.1
-    created: "2023-09-08T00:08:16.273645331+05:30"
+    created: "2023-09-08T12:17:21.792927723+05:30"
     description: Official Elastic helm chart for Elasticsearch
     digest: 8a5e70ec72dc480c8a01b079bf7240722da7d017f5683178e23a745d418448ba
     home: https://github.com/elastic/helm-charts
@@ -85,12 +85,12 @@ entries:
     sources:
     - https://github.com/elastic/elasticsearch
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/elasticsearch-8.5.1.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/elasticsearch-8.5.1.tgz
     version: 8.5.1
   fluentd-elasticsearch:
   - apiVersion: v1
     appVersion: 2.8.0
-    created: "2023-09-08T00:08:16.279057091+05:30"
+    created: "2023-09-08T12:17:21.815008798+05:30"
     description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
     digest: dfebc613e5783551422a803ada3763de9748f1f6270074a1616d843337c793f6
     home: https://www.fluentd.org/
@@ -113,12 +113,12 @@ entries:
     - https://github.com/GoogleCloudPlatform/fluent-plugin-detect-exceptions
     - https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/fluentd-elasticsearch/fluentd-es-image
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/fluentd-elasticsearch-6.2.8.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/fluentd-elasticsearch-6.2.8.tgz
     version: 6.2.8
   gitlab:
   - apiVersion: v1
     appVersion: v16.3.2
-    created: "2023-09-08T00:08:16.335316297+05:30"
+    created: "2023-09-08T12:17:21.889894795+05:30"
     dependencies:
     - name: gitlab
       repository: ""
@@ -188,12 +188,12 @@ entries:
     sources:
     - https://gitlab.com/gitlab-org/charts/gitlab
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/gitlab-7.3.2.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/gitlab-7.3.2.tgz
     version: 7.3.2
   gitlab-runner:
   - apiVersion: v1
     appVersion: 16.3.0
-    created: "2023-09-08T00:08:16.336840102+05:30"
+    created: "2023-09-08T12:17:21.891464767+05:30"
     description: GitLab Runner
     digest: 841ee2f2a6e55eb0d2be4308036c5fcc032d2906cf15e31229f581725c0b685d
     icon: https://gitlab.com/uploads/-/system/project/avatar/250833/runner_logo.png
@@ -210,29 +210,29 @@ entries:
     - https://gitlab.com/gitlab-org/gitlab-runner
     - https://docs.gitlab.com/runner/
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/gitlab-runner-0.56.0.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/gitlab-runner-0.56.0.tgz
     version: 0.56.0
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-08T00:08:16.337293271+05:30"
+    created: "2023-09-08T12:17:21.907246996+05:30"
     description: A Helm chart for Kubernetes
     digest: b51e269aae7b3ba541caeee9d4f366876968eaf0383fad3b61a062a2170a2fa8
     name: helm-chart-test
     type: application
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/helm-chart-test-0.1.0.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/helm-chart-test-0.1.0.tgz
     version: 0.1.0
   ingress-nginx-controller-v0.34.1:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-08T00:08:16.859519519+05:30"
+    created: "2023-09-08T12:17:22.472772417+05:30"
     description: A Helm chart for Kubernetes
     digest: bf570c09431cacba8951f62331b2b015840f216deffadafe6f484e4844a51fc0
     name: ingress-nginx-controller-v0.34.1
     type: application
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/ingress-nginx-controller-v0.34.1-0.1.0.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/ingress-nginx-controller-v0.34.1-0.1.0.tgz
     version: 0.1.0
   kibana:
   - annotations:
@@ -245,7 +245,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.9.2
-    created: "2023-09-08T00:08:16.86265118+05:30"
+    created: "2023-09-08T12:17:22.475989193+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -271,12 +271,12 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/kibana
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/kibana-10.5.1.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/kibana-10.5.1.tgz
     version: 10.5.1
   nginx-ingress:
   - apiVersion: v2
     appVersion: 3.2.1
-    created: "2023-09-08T00:08:16.865240373+05:30"
+    created: "2023-09-08T12:17:22.478394066+05:30"
     description: NGINX Ingress Controller
     digest: a0ecd6960599880d294262eef10b2fadabbf47f57137364995fb1b152a650d6b
     home: https://github.com/nginxinc/kubernetes-ingress
@@ -293,7 +293,7 @@ entries:
     - https://github.com/nginxinc/kubernetes-ingress/tree/v3.2.1/deployments/helm-chart
     type: application
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/nginx-ingress-0.18.1.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/nginx-ingress-0.18.1.tgz
     version: 0.18.1
   postgresql:
   - annotations:
@@ -308,7 +308,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 15.4.0
-    created: "2023-09-08T00:08:16.870628454+05:30"
+    created: "2023-09-08T12:17:22.483835117+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -335,7 +335,7 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/postgresql-12.11.0.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/postgresql-12.11.0.tgz
     version: 12.11.0
   postgresql-ha:
   - annotations:
@@ -352,7 +352,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 15.4.0
-    created: "2023-09-08T00:08:16.876717225+05:30"
+    created: "2023-09-08T12:17:22.490079128+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -382,7 +382,7 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/postgresql-ha
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/postgresql-ha-11.9.2.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/postgresql-ha-11.9.2.tgz
     version: 11.9.2
   prometheus:
   - annotations:
@@ -399,7 +399,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.47.0
-    created: "2023-09-08T00:08:16.881776397+05:30"
+    created: "2023-09-08T12:17:22.494906165+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -424,6 +424,6 @@ entries:
     - https://github.com/prometheus/prometheus
     - https://github.com/prometheus-community/helm-charts
     urls:
-    - https://sushilsanjaybhile.github.io/helmcharts/ls/helm-chart-sources/prometheus-0.2.2.tgz
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/prometheus-0.2.2.tgz
     version: 0.2.2
-generated: "2023-09-08T00:08:16.2564307+05:30"
+generated: "2023-09-08T12:17:21.777840546+05:30"

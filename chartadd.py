@@ -38,6 +38,7 @@ def createLogoDict():
 				chartLogoDict[chartName] = iconURL
 
 	f = open('url.txt', 'w')
+	print(chartLogoDict)
 	f.write( repr(chartLogoDict) + '\n' )
 	f.close()
 
