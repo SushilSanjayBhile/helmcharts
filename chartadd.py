@@ -1,4 +1,4 @@
-import os, yaml
+import os, yaml, json
 import shutil
 
 chartDir = "helm-chart-sources"
@@ -13,18 +13,25 @@ chartList = ["gitlab/gitlab", "gitlab/fluentd-elasticsearch", "gitlab/gitlab-run
 
 
 def pullUntarCmd(chart):
-	os.system("helm pull --untar " + chart)
+	cmd = "helm pull --untar " + chart
+	print("Executing: " + cmd)
+	os.system(cmd)
 
 def pullTarCmd(chart):
-	os.system("helm pull " + chart)
+	cmd = "helm pull " + chart
+	print("Executing: " + cmd)
+	os.system(cmd)
 
 def helmRepoAddFunc(repo, repoURL):
-	os.system("helm repo add " + repo + " " + repoURL)
+	cmd = "helm repo add " + repo + " " + repoURL
+	print("Executing: " + cmd)
+	os.system(cmd)
 
 def updateRepoFunc():
 	os.system("helm repo update")
 
 def createLogoDict():
+	chartLogoDict = {}
 	for subdir, dirs, files in os.walk("./helm-chart-untar-sources"):
 		for file in files:
 			if "Chart.yaml" == file:
@@ -38,7 +45,8 @@ def createLogoDict():
 				chartLogoDict[chartName] = iconURL
 
 	f = open('url.txt', 'w')
-	print(chartLogoDict)
+	#chartLogoDict = chartLogoDict.replace("'", "\"")
+	print(json.dumps(chartLogoDict))
 	f.write( repr(chartLogoDict) + '\n' )
 	f.close()
 
@@ -49,17 +57,21 @@ def deleteUntarDir(mydir):
 		print("Error: %s - %s." % (e.filename, e.strerror))
 
 # Add repos
+print("\nAdding Repos...\n")
 for repo in repoDict:
 	helmRepoAddFunc(repo, repoDict[repo])
 
 # Update repos
+print("\nUpdating Repos...\n")
 updateRepoFunc()
 
 # pull chart and untar them
+print("\nPulling chart tar file...\n")
 os.chdir("helm-chart-sources")
 for chart in chartList:
 	pullTarCmd(chart)
 
+print("\nPulling chart untar file...\n")
 os.chdir("../helm-chart-untar-sources")
 for chart in chartList:
 	pullUntarCmd(chart)
@@ -69,4 +81,4 @@ createLogoDict()
 deleteUntarDir("helm-chart-untar-sources")
 
 os.system("helm repo index . --url=https://sushilsanjaybhile.github.io/helmcharts/")
-os.system("git add .; git commit -m \"merged index.html\"; git push")
+os.system("hit status; git add .; git status; git commit -m \"merged index.html\"; git push")
