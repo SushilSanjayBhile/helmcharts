@@ -15,7 +15,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.12.4
-    created: "2023-09-08T12:37:36.218252731+05:30"
+    created: "2023-09-12T13:10:11.773903666+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -44,7 +44,7 @@ entries:
   elastic-stack:
   - apiVersion: v1
     appVersion: 7.6.2
-    created: "2023-09-08T12:37:36.222781442+05:30"
+    created: "2023-09-12T13:10:11.799534609+05:30"
     dependencies:
     - condition: elasticsearch.enabled
       name: elasticsearch
@@ -73,7 +73,7 @@ entries:
   elasticsearch:
   - apiVersion: v1
     appVersion: 8.5.1
-    created: "2023-09-08T12:37:36.224981125+05:30"
+    created: "2023-09-12T13:10:11.8033326+05:30"
     description: Official Elastic helm chart for Elasticsearch
     digest: 8a5e70ec72dc480c8a01b079bf7240722da7d017f5683178e23a745d418448ba
     home: https://github.com/elastic/helm-charts
@@ -90,7 +90,7 @@ entries:
   fluentd-elasticsearch:
   - apiVersion: v1
     appVersion: 2.8.0
-    created: "2023-09-08T12:37:36.230477851+05:30"
+    created: "2023-09-12T13:10:11.843150089+05:30"
     description: A Fluentd Helm chart for Kubernetes with Elasticsearch output
     digest: dfebc613e5783551422a803ada3763de9748f1f6270074a1616d843337c793f6
     home: https://www.fluentd.org/
@@ -118,7 +118,7 @@ entries:
   gitlab:
   - apiVersion: v1
     appVersion: v16.3.2
-    created: "2023-09-08T12:37:36.288484039+05:30"
+    created: "2023-09-12T13:10:11.932330547+05:30"
     dependencies:
     - name: gitlab
       repository: ""
@@ -193,7 +193,7 @@ entries:
   gitlab-runner:
   - apiVersion: v1
     appVersion: 16.3.0
-    created: "2023-09-08T12:37:36.290005434+05:30"
+    created: "2023-09-12T13:10:11.934204659+05:30"
     description: GitLab Runner
     digest: 841ee2f2a6e55eb0d2be4308036c5fcc032d2906cf15e31229f581725c0b685d
     icon: https://gitlab.com/uploads/-/system/project/avatar/250833/runner_logo.png
@@ -215,7 +215,7 @@ entries:
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-08T12:37:36.290442358+05:30"
+    created: "2023-09-12T13:10:11.947711144+05:30"
     description: A Helm chart for Kubernetes
     digest: b51e269aae7b3ba541caeee9d4f366876968eaf0383fad3b61a062a2170a2fa8
     name: helm-chart-test
@@ -226,7 +226,7 @@ entries:
   ingress-nginx-controller-v0.34.1:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-09-08T12:37:36.803349276+05:30"
+    created: "2023-09-12T13:10:12.573126452+05:30"
     description: A Helm chart for Kubernetes
     digest: bf570c09431cacba8951f62331b2b015840f216deffadafe6f484e4844a51fc0
     name: ingress-nginx-controller-v0.34.1
@@ -245,7 +245,45 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.9.2
-    created: "2023-09-08T12:37:36.806454077+05:30"
+    created: "2023-09-12T13:10:12.594806035+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Kibana is an open source, browser based analytics and search dashboard
+      for Elasticsearch. Kibana strives to be easy to get started with, while also
+      being flexible and powerful.
+    digest: 42d818164ba2f74b777b0a1956f50195cb5f01dc74b174b70f0e4951a186f0d5
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/kibana/img/kibana-stack-220x234.png
+    keywords:
+    - kibana
+    - analytics
+    - monitoring
+    - metrics
+    - logs
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: kibana
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/kibana
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/kibana-10.5.2.tgz
+    version: 10.5.2
+  - annotations:
+      category: Analytics
+      images: |
+        - name: kibana
+          image: docker.io/bitnami/kibana:8.9.2-debian-11-r0
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r60
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 8.9.2
+    created: "2023-09-12T13:10:12.591744879+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -276,7 +314,7 @@ entries:
   nginx-ingress:
   - apiVersion: v2
     appVersion: 3.2.1
-    created: "2023-09-08T12:37:36.808910934+05:30"
+    created: "2023-09-12T13:10:12.597260256+05:30"
     description: NGINX Ingress Controller
     digest: a0ecd6960599880d294262eef10b2fadabbf47f57137364995fb1b152a650d6b
     home: https://github.com/nginxinc/kubernetes-ingress
@@ -308,7 +346,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 15.4.0
-    created: "2023-09-08T12:37:36.814269105+05:30"
+    created: "2023-09-12T13:10:12.614368168+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -352,7 +390,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 15.4.0
-    created: "2023-09-08T12:37:36.820542951+05:30"
+    created: "2023-09-12T13:10:12.620924759+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -399,7 +437,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.47.0
-    created: "2023-09-08T12:37:36.825520545+05:30"
+    created: "2023-09-12T13:10:12.626036893+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -426,4 +464,4 @@ entries:
     urls:
     - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/prometheus-0.2.2.tgz
     version: 0.2.2
-generated: "2023-09-08T12:37:36.210529502+05:30"
+generated: "2023-09-12T13:10:11.724146524+05:30"
