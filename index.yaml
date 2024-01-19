@@ -1,9 +1,46 @@
 apiVersion: v1
 entries:
+  argo-cd:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 2.4.12
+    created: "2024-01-19T18:00:46.471427017+05:30"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://marketplace.azurecr.io/helm/v1/repo
+      version: 17.x.x
+    - name: common
+      repository: https://marketplace.azurecr.io/helm/v1/repo
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Argo CD is a continuous delivery tool for Kubernetes based on GitOps.
+    digest: dbfbaa0962c35fa7bc1bf3bd91c8514083a095c87254e7239a77dda00b666f10
+    home: https://argoproj.github.io/argo-cd/
+    icon: https://bitnami.com/assets/stacks/argo-cd/img/argo-cd-stack-220x234.png
+    keywords:
+    - Continuous delivery
+    - Continuous deployment
+    - Devops
+    - Kubernetes
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: argo-cd
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/argo-cd
+    - https://github.com/argoproj/argo-cd/
+    - https://github.com/bitnami/containers/tree/main/bitnami/dex
+    - https://github.com/dexidp/dex
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/argo-cd-4.2.0.tgz
+    version: 4.2.0
   elasticsearch:
   - apiVersion: v1
     appVersion: 8.5.1
-    created: "2024-01-19T17:56:20.023391102+05:30"
+    created: "2024-01-19T18:00:46.472927821+05:30"
     description: Official Elastic helm chart for Elasticsearch
     digest: 8a5e70ec72dc480c8a01b079bf7240722da7d017f5683178e23a745d418448ba
     home: https://github.com/elastic/helm-charts
@@ -17,12 +54,39 @@ entries:
     urls:
     - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/elasticsearch-8.5.1.tgz
     version: 8.5.1
+  harbor:
+  - apiVersion: v1
+    appVersion: 2.9.1
+    created: "2024-01-19T18:00:46.475810125+05:30"
+    description: An open source trusted cloud native registry that stores, signs,
+      and scans content
+    digest: 2ab4fd8225bda1e9796bcfbbaae738e1e157a84f8103f3fbec6425fcb375bfd5
+    home: https://goharbor.io
+    icon: https://raw.githubusercontent.com/goharbor/website/main/static/img/logos/harbor-icon-color.png
+    keywords:
+    - docker
+    - registry
+    - harbor
+    maintainers:
+    - email: yinw@vmware.com
+      name: Wenkai Yin
+    - email: hweiwei@vmware.com
+      name: Weiwei He
+    - email: yshengwen@vmware.com
+      name: Shengwen Yu
+    name: harbor
+    sources:
+    - https://github.com/goharbor/harbor
+    - https://github.com/goharbor/harbor-helm
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/harbor-1.13.1.tgz
+    version: 1.13.1
   kafka:
   - annotations:
       category: Infrastructure
     apiVersion: v2
     appVersion: 3.2.0
-    created: "2024-01-19T17:56:20.030211997+05:30"
+    created: "2024-01-19T18:00:46.482797152+05:30"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -55,10 +119,45 @@ entries:
     urls:
     - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/kafka-17.1.0.tgz
     version: 17.1.0
+  mongodb:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.0.2
+    created: "2024-01-19T18:00:46.487051713+05:30"
+    dependencies:
+    - name: common
+      repository: https://marketplace.azurecr.io/helm/v1/repo
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MongoDB(R) is a relational open source NoSQL database. Easy to use,
+      it stores data in JSON-like documents. Automated scalability and high-performance.
+      Ideal for developing cloud native applications.
+    digest: ffb1b254506171ff5af92f3941c2a2d9480c1984f6945ca94febeb327e4d81e2
+    home: https://github.com/bitnami/charts/tree/main/bitnami/mongodb
+    icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: mongodb
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/mongodb
+    - https://mongodb.org
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/mongodb-13.3.1.tgz
+    version: 13.3.1
   mssql:
   - apiVersion: v2
     appVersion: 2019-CU16-GDR1-ubuntu-20.04
-    created: "2024-01-19T17:56:20.030729124+05:30"
+    created: "2024-01-19T18:00:46.487588472+05:30"
     description: Microsoft SQL Server 2019 Express
     digest: 9c2c12afddbc7a237a7f7badf8a44d899b77b8d52422667d3d3408e52c5fc0c6
     icon: https://github.com/licenseware/helm-charts/raw/main/static/png/mssql.png
@@ -67,10 +166,79 @@ entries:
     urls:
     - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/mssql-0.1.2.tgz
     version: 0.1.2
+  mysql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 8.0.31
+    created: "2024-01-19T18:00:46.491080607+05:30"
+    dependencies:
+    - name: common
+      repository: https://marketplace.azurecr.io/helm/v1/repo
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MySQL is a fast, reliable, scalable, and easy to use open source
+      relational database system. Designed to handle mission-critical, heavy-load
+      production applications.
+    digest: bfe5e7c570a148c474c71b26f23f18f933639b5cb5b3daf7a1ab1c821652ada9
+    home: https://github.com/bitnami/charts/tree/main/bitnami/mysql
+    icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    - cluster
+    - high availability
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: mysql
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/mysql
+    - https://mysql.com
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/mysql-9.4.3.tgz
+    version: 9.4.3
+  nginx-ingress-controller:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 1.4.0
+    created: "2024-01-19T18:00:46.493706813+05:30"
+    dependencies:
+    - name: common
+      repository: https://marketplace.azurecr.io/helm/v1/repo
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: NGINX Ingress Controller is an Ingress controller that manages external
+      access to HTTP services in a Kubernetes cluster using NGINX.
+    digest: 8d0c445b51239cd81042b4b2c1916c07edf2ea970050d68fa54b7072e8c9359c
+    home: https://github.com/bitnami/charts/tree/master/bitnami/nginx-ingress-controller
+    icon: https://bitnami.com/assets/stacks/nginx-ingress-controller/img/nginx-ingress-controller-stack-220x234.png
+    keywords:
+    - ingress
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    kubeVersion: '>= 1.20.0-0'
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: nginx-ingress-controller
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/nginx-ingress-controller
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/nginx-ingress-controller-9.3.18.tgz
+    version: 9.3.18
   oracle:
   - apiVersion: v2
     appVersion: 19.3.0-ee
-    created: "2024-01-19T17:56:20.031052627+05:30"
+    created: "2024-01-19T18:00:46.494030928+05:30"
     description: A Helm chart for Kubernetes
     digest: 5910352db13e27357155b900b40fa5aec9cedc707dd91b5461192666a4661a7b
     name: oracle
@@ -78,4 +246,39 @@ entries:
     urls:
     - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/oracle-0.7.3.tgz
     version: 0.7.3
-generated: "2024-01-19T17:56:20.021717639+05:30"
+  postgresql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 15.1.0
+    created: "2024-01-19T18:00:46.497427963+05:30"
+    dependencies:
+    - name: common
+      repository: https://marketplace.azurecr.io/helm/v1/repo
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: c2dab48ae911710ea80c091d0b64df27e98cbebab930909362b4695f21fe7dcc
+    home: https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+    - https://www.postgresql.org/
+    urls:
+    - https://sushilsanjaybhile.github.io/helmcharts/helm-chart-sources/postgresql-12.1.2.tgz
+    version: 12.1.2
+generated: "2024-01-19T18:00:46.460674738+05:30"
