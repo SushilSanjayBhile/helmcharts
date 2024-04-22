@@ -1,0 +1,6 @@
+dependencies:
+- name: common
+  repository: https://marketplace.azurecr.io/helm/v1/repo
+  version: 2.1.2
+digest: sha256:ca3242e5d00c32a56f4355a058166b275bc852ddca4c6a44ec45c27d72908b6c
+generated: "2022-11-11T06:21:52.004017124Z"
